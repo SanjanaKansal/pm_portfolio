@@ -1,53 +1,76 @@
 {
   "_meta": {
     "models": {
-      "rows": "Two rows representing what I bring and what I look for in a role."
+      "rows": "Three rows representing how I work, what I value, and where I add value."
     }
   },
   "rows": [
     {
-      "id": "bring",
-      "title": "What I Bring",
+      "id": "how-i-work",
+      "title": "How I Work",
       "color": "purple",
       "items": [
         {
-          "title": "Fast Execution, High Ownership",
-          "description": "I move quickly, take responsibility end-to-end, and don't wait to be unblocked."
+          "title": "Bias toward clarity → execution → learning",
+          "description": "Instead of rushing into output"
         },
         {
-          "title": "Product + Tech Mindset",
-          "description": "I can think in systems, constraints, and user impact — not just features."
+          "title": "Prefer environments that value depth",
+          "description": "Responsibility and thoughtful decision-making"
         },
         {
-          "title": "Delivery Ahead of Time",
-          "description": "I prefer clear scope → fast loops → shipping earlier than planned."
+          "title": "Own problems end-to-end",
+          "description": "Not sliced into isolated tasks"
         },
         {
-          "title": "Clarity & Structured Thinking",
-          "description": "I communicate decisions simply so teams stay aligned and move faster."
+          "title": "Calm pace, steady progress",
+          "description": "Measure success through behaviour change, reduced friction, and operational lift"
         }
       ]
     },
     {
-      "id": "lookfor",
-      "title": "What I Look For",
+      "id": "what-i-value",
+      "title": "What I Value",
       "color": "green",
       "items": [
         {
-          "title": "Remote-first, Flexible Work Style",
-          "description": "I work best in environments that value trust over time-tracking."
+          "title": "Trust-based, remote-friendly culture",
+          "description": "Where autonomy and accountability go together"
         },
         {
-          "title": "Ownership-Driven Culture",
-          "description": "I enjoy roles where I'm accountable for outcomes, not just tasks."
+          "title": "Leaders who care about craft",
+          "description": "Integrity and long-term thinking"
         },
         {
-          "title": "Fast-Moving, Builder-Focused Teams",
-          "description": "I thrive where iteration, learning, and action matter more than process."
+          "title": "Teams that prioritise impact",
+          "description": "Over feature volume"
         },
         {
-          "title": "Mutual Respect & Autonomy",
-          "description": "Clear communication, psychological safety, and space to think deeply."
+          "title": "Psychological safety",
+          "description": "Space to think, question, and improve systems"
+        }
+      ]
+    },
+    {
+      "id": "where-i-add-value",
+      "title": "Where I Add Value",
+      "color": "purple",
+      "items": [
+        {
+          "title": "Product × Systems × Behaviour",
+          "description": "Work that sits at the intersection"
+        },
+        {
+          "title": "Structured thinking & iteration",
+          "description": "Problems that benefit from iterative improvement"
+        },
+        {
+          "title": "Better design → faster decisions",
+          "description": "Workflows where design leads to lower effort"
+        },
+        {
+          "title": "Calm execution & measurable outcomes",
+          "description": "Teams that appreciate intention, responsibility, and meaningful progress"
         }
       ]
     }

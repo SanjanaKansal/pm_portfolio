@@ -31,24 +31,20 @@ export function WhoAmI({
         ))}
       </div>
 
-      {/* Row 2: Education - 2 wider cards */}
-      <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr_1fr]">
+      {/* Row 2: Education - 1 card */}
+      <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr]">
         <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
           <h2 className="text-xs font-medium uppercase tracking-widest text-amber-600 dark:text-amber-400">
             Education
           </h2>
         </div>
-        {[0, 1].map((index) => {
-          const card = educationCards[index]
-          return (
-            <GridCard
-              key={`education-${index}`}
-              title={card?.title}
-              subtitle={card?.subtitle}
-              content={card?.content}
-            />
-          )
-        })}
+        {educationCards[0] && (
+          <GridCard
+            title={educationCards[0].title}
+            subtitle={educationCards[0].subtitle}
+            content={educationCards[0].content}
+          />
+        )}
       </div>
 
       {/* Row 3: Experience - 3 cards */}
@@ -80,11 +76,35 @@ interface GridCardProps {
   content?: string
 }
 
+function renderContent(text: string) {
+  // Split by newlines first, then handle bold within each line
+  const lines = text.split('\n')
+  return lines.map((line, lineIndex) => {
+    const parts = line.split(/(\*\*[^*]+\*\*)/g)
+    const renderedParts = parts.map((part, partIndex) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return (
+          <strong key={partIndex} className="font-semibold text-stone-900 dark:text-stone-100">
+            {part.slice(2, -2)}
+          </strong>
+        )
+      }
+      return <span key={partIndex}>{part}</span>
+    })
+    return (
+      <span key={lineIndex}>
+        {renderedParts}
+        {lineIndex < lines.length - 1 && <br />}
+      </span>
+    )
+  })
+}
+
 function GridCard({ title, subtitle, content }: GridCardProps) {
   return (
     <div className="flex flex-col justify-center bg-stone-50 p-6 dark:bg-stone-950">
       {title && (
-        <h3 className="text-sm font-medium text-stone-900 dark:text-stone-100">
+        <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">
           {title}
         </h3>
       )}
@@ -94,8 +114,8 @@ function GridCard({ title, subtitle, content }: GridCardProps) {
         </p>
       )}
       {content && (
-        <p className={`whitespace-pre-line text-sm leading-relaxed text-stone-600 dark:text-stone-400 ${title ? 'mt-2' : ''}`}>
-          {content}
+        <p className={`text-sm leading-relaxed text-stone-600 dark:text-stone-400 ${title ? 'mt-2' : ''}`}>
+          {renderContent(content)}
         </p>
       )}
     </div>

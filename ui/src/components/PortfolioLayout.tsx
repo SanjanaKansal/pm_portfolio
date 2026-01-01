@@ -35,7 +35,7 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
             }}
             className="font-medium text-stone-900 transition-colors hover:text-amber-600 dark:text-stone-100 dark:hover:text-amber-400"
           >
-            Sanjana
+            Sanjana Kansal
           </a>
 
           {/* Desktop Navigation */}

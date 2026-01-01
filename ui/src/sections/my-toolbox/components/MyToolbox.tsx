@@ -7,9 +7,33 @@ const colorMap = {
   green: 'text-green-600 dark:text-green-400',
 }
 
+function renderContent(text: string) {
+  if (!text) return null
+  const lines = text.split('\n')
+  return lines.map((line, lineIndex) => {
+    const parts = line.split(/(\*\*[^*]+\*\*)/g)
+    const renderedParts = parts.map((part, partIndex) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return (
+          <strong key={partIndex} className="font-semibold text-stone-900 dark:text-stone-100">
+            {part.slice(2, -2)}
+          </strong>
+        )
+      }
+      return <span key={partIndex}>{part}</span>
+    })
+    return (
+      <span key={lineIndex}>
+        {renderedParts}
+        {lineIndex < lines.length - 1 && <br />}
+      </span>
+    )
+  })
+}
+
 export function MyToolbox({ categories }: MyToolboxProps) {
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-4rem)]">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800">
       {/* 4 rows - one per category */}
       {categories.map((category) => (
         <div
@@ -31,9 +55,11 @@ export function MyToolbox({ categories }: MyToolboxProps) {
               <h3 className="text-sm font-medium text-stone-900 dark:text-stone-100">
                 {skill.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400">
-                {skill.description}
-              </p>
+              {skill.description && (
+                <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400">
+                  {renderContent(skill.description)}
+                </p>
+              )}
             </div>
           ))}
         </div>
