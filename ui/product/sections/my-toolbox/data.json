@@ -12,19 +12,19 @@
       "skills": [
         {
           "title": "Product Strategy & Roadmapping",
-          "description": "I prioritise using RICE, MoSCoW, and effort-vs-impact — so decisions stay rational, not intuition-driven."
+          "description": "I prioritise with RICE / MoSCoW and effort-vs-impact — not gut feelings."
         },
         {
           "title": "0→1 Product Execution",
-          "description": "Built the IIT Jammu electricity analytics panel (B2B) from idea → workflows → shipped version used by campus stakeholders."
+          "description": "Built the IIT Jammu B2B electricity analytics panel — from idea to shipped version."
         },
         {
           "title": "Problem Framing & PRDs",
-          "description": "I anchor decisions on the user problem, constraints, and context — solutions only come after clarity."
+          "description": "I start with the problem and constraints first — solutions come after."
         },
         {
           "title": "Execution Under Constraints",
-          "description": "I focus on fast loops and first value — shipping progress instead of chasing perfect scope."
+          "description": "Move fast, ship first value, improve in small loops."
         }
       ]
     },
@@ -35,19 +35,19 @@
       "skills": [
         {
           "title": "LLM-powered Workflows — TalentKnct",
-          "description": "Used AI inside real user workflows — improving relevance and reducing manual effort instead of adding \"AI for the sake of AI.\""
+          "description": "Used AI inside real workflows — not as a \"nice-to-have layer.\""
         },
         {
           "title": "AI in My PM Workflow — Vibe Coding",
-          "description": "I work with AI across research, writing, and iteration — treating it as a thinking partner, not just a tool."
+          "description": "Use Claude + Cursor across research, thinking, and iteration."
         },
         {
           "title": "Prompt & Behaviour Design",
-          "description": "I treat prompts like product levers — small changes reshape outcomes, flow, and user experience."
+          "description": "Treat prompts like product levers — small changes shape outcomes."
         },
         {
           "title": "Human-in-the-Loop Decisions",
-          "description": "I design AI to support judgment in decision workflows — not replace it blindly."
+          "description": "AI supports judgment, not replaces it."
         }
       ]
     },
@@ -58,19 +58,19 @@
       "skills": [
         {
           "title": "Backend Systems · Python · Django",
-          "description": "Comfortable working close to systems — where reliability, clarity, and maintainability matter."
+          "description": "Comfortable working close to systems and infra."
         },
         {
           "title": "Redis · Caching · Performance",
-          "description": "Improved real-world performance through caching patterns and access-path optimisation at scale."
+          "description": "Improved latency and cost through caching and pipeline optimisation."
         },
         {
           "title": "System Design & APIs",
-          "description": "Prefer simple, predictable architectures that scale without unnecessary complexity."
+          "description": "Prefer simple, predictable designs that scale."
         },
         {
-          "title": "Infra Awareness · AWS & Cost Sensitivity",
-          "description": "Treat infra choices as business choices — cost, stability, and user trust stay connected."
+          "title": "Infra Awareness — AWS & Cost",
+          "description": "See infra choices as business decisions."
         }
       ]
     },
@@ -81,19 +81,19 @@
       "skills": [
         {
           "title": "User Surveys & Research — Airtribe",
-          "description": "Ran structured surveys and conversations to uncover real learner friction — turning signals into clear product direction."
+          "description": "Ran surveys and conversations to uncover real learner friction."
         },
         {
           "title": "Creative Problem-Solving at Speed",
-          "description": "I explore options fast, test early, and converge on the solution that actually works in context."
+          "description": "Explore options fast → test → converge on what works."
         },
         {
           "title": "Strong, Direct Communication",
-          "description": "I share context, constraints, and decisions openly — helping teams move in one direction with confidence."
+          "description": "Share context and decisions clearly so teams stay aligned."
         },
         {
-          "title": "Ownership & Action-Driven Mindset",
-          "description": "I take problems end-to-end — ship first value, refine with feedback, and scale with intention."
+          "title": "Ownership & Action Bias",
+          "description": "Pick problems end-to-end and push them forward."
         }
       ]
     }

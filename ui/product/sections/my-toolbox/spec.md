@@ -13,4 +13,4 @@ A 4x4 grid showcasing skills across four categories: Product, AI, Tech, and User
 - All content visible upfront (no progressive reveal)
 
 ## Configuration
-- shell: false
+- shell: true
