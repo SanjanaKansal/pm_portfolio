@@ -44,7 +44,7 @@ export function ContactMe({ identity, socials, tagline }: ContactMeProps) {
             rel="noopener noreferrer"
             className="flex flex-col justify-center bg-stone-50 p-6 transition-colors hover:bg-stone-100 dark:bg-stone-950 dark:hover:bg-stone-900"
           >
-            <h3 className="text-sm font-medium text-stone-900 dark:text-stone-100">
+            <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">
               {social.platform}
             </h3>
             <p className="mt-1 text-xs text-stone-400 dark:text-stone-500">

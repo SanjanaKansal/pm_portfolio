@@ -52,7 +52,7 @@ export function MyToolbox({ categories }: MyToolboxProps) {
               key={`${category.id}-${index}`}
               className="flex flex-col justify-center bg-stone-50 p-5 dark:bg-stone-950"
             >
-              <h3 className="text-sm font-medium text-stone-900 dark:text-stone-100">
+              <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">
                 {skill.title}
               </h3>
               {skill.description && (
