@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "models": {
+      "background": "Your origin story — what sparked your curiosity and shaped your path from human psychology to systems thinking.",
+      "education": "Your academic journey and formal learning experiences that built your foundation.",
+      "experience": "Places you've worked and the impact you've made — engineering with business context."
+    },
+    "relationships": [
+      "Background sets the context for why you chose your education path",
+      "Education provides the foundation that enabled your experience",
+      "Experience builds toward your current role and future direction"
+    ]
+  },
+  "background": {
+    "title": "Journey",
+    "points": [
+      "I've always been curious about how people think, decide, and behave.\nThat curiosity is what eventually led me toward problem-solving and systems.",
+      "At IIT, I started seeing patterns — in code, systems, and behaviour.\nTech became less about coding and more about how things work together.",
+      "I realised my work sits between people, product, and engineering.\nI enjoy building where technology supports real-world decisions."
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "institution": "IIT Jammu",
+        "degree": "B.Tech Computer Science",
+        "years": "Aug 2016 – May 2020",
+        "description": "Built foundations in systems, scalability, and first-principles problem-solving.\nLearned to break complexity into clear, actionable decisions."
+      },
+      {
+        "institution": "Airtribe",
+        "degree": "AI-First Product Management",
+        "years": "Sep 2025 – Ongoing",
+        "description": "Shifted from building features to designing outcomes, loops, and impact.\nConnected user insight → product decisions → business value."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "company": "HealthifyMe",
+        "role": "Software Engineer",
+        "years": "Mar 2021 – Dec 2023",
+        "description": "Built cost-optimised, reliable backend systems — caching, Redis pipelines, infra optimisation.\nImproved performance and reduced cloud costs while keeping systems compliant and stable."
+      },
+      {
+        "company": "Attentive OS",
+        "role": "Software Engineer II",
+        "years": "Mar 2023 – Oct 2024",
+        "description": "Co-led platform architecture and built a proposal engine reducing manual effort ~25%.\nWorked across engineering and product, contributing to delivery and roadmap decisions."
+      },
+      {
+        "company": "CoinedOne",
+        "role": "PM Intern",
+        "years": "Oct 2025 – Present",
+        "description": "Designed Rivo OS end-to-end — the workflow layer powering UAE mortgage journeys.\nSimplified onboarding and decision steps using user research + data-driven iteration."
+      }
+    ]
+  }
+}
