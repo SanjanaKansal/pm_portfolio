@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "models": {
+      "rows": "Two rows representing what I bring and what I look for in a role."
+    }
+  },
+  "rows": [
+    {
+      "id": "bring",
+      "title": "What I Bring",
+      "color": "purple",
+      "items": [
+        {
+          "title": "Fast Execution, High Ownership",
+          "description": "I move quickly, take responsibility end-to-end, and don't wait to be unblocked."
+        },
+        {
+          "title": "Product + Tech Mindset",
+          "description": "I can think in systems, constraints, and user impact — not just features."
+        },
+        {
+          "title": "Delivery Ahead of Time",
+          "description": "I prefer clear scope → fast loops → shipping earlier than planned."
+        },
+        {
+          "title": "Clarity & Structured Thinking",
+          "description": "I communicate decisions simply so teams stay aligned and move faster."
+        }
+      ]
+    },
+    {
+      "id": "lookfor",
+      "title": "What I Look For",
+      "color": "green",
+      "items": [
+        {
+          "title": "Remote-first, Flexible Work Style",
+          "description": "I work best in environments that value trust over time-tracking."
+        },
+        {
+          "title": "Ownership-Driven Culture",
+          "description": "I enjoy roles where I'm accountable for outcomes, not just tasks."
+        },
+        {
+          "title": "Fast-Moving, Builder-Focused Teams",
+          "description": "I thrive where iteration, learning, and action matter more than process."
+        },
+        {
+          "title": "Mutual Respect & Autonomy",
+          "description": "Clear communication, psychological safety, and space to think deeply."
+        }
+      ]
+    }
+  ]
+}

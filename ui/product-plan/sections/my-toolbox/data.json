@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "models": {
+      "categories": "Four skill categories representing different dimensions of product work."
+    }
+  },
+  "categories": [
+    {
+      "id": "product",
+      "title": "Product",
+      "color": "stone",
+      "skills": [
+        {
+          "title": "Product Strategy & Roadmapping",
+          "description": "I prioritise with RICE / MoSCoW and effort-vs-impact — not gut feelings."
+        },
+        {
+          "title": "0→1 Product Execution",
+          "description": "Built a B2B electricity analytics panel — from idea to shipped version."
+        },
+        {
+          "title": "Problem Framing & PRDs",
+          "description": "I start with the problem and constraints first — solutions come after."
+        },
+        {
+          "title": "Execution Under Constraints",
+          "description": "Move fast, ship first value, improve in small loops."
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI",
+      "color": "blue",
+      "skills": [
+        {
+          "title": "LLM-powered Workflows — TalentKnct",
+          "description": "Used AI inside real workflows — not as a \"nice-to-have layer.\""
+        },
+        {
+          "title": "AI in My PM Workflow — Vibe Coding",
+          "description": "Use Claude + Cursor across research, thinking, and iteration."
+        },
+        {
+          "title": "Prompt & Behaviour Design",
+          "description": "Treat prompts like product levers — small changes shape outcomes."
+        },
+        {
+          "title": "Human-in-the-Loop Decisions",
+          "description": "AI supports judgment, not replaces it."
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "title": "Tech",
+      "color": "amber",
+      "skills": [
+        {
+          "title": "Backend Systems · Python · Django",
+          "description": "Comfortable working close to systems and infra."
+        },
+        {
+          "title": "Redis · Caching · Performance",
+          "description": "Improved latency and cost through caching and pipeline optimisation."
+        },
+        {
+          "title": "System Design & APIs",
+          "description": "Prefer simple, predictable designs that scale."
+        },
+        {
+          "title": "Infra Awareness — AWS & Cost",
+          "description": "See infra choices as business decisions."
+        }
+      ]
+    },
+    {
+      "id": "user",
+      "title": "User & Soft Skills",
+      "color": "green",
+      "skills": [
+        {
+          "title": "User Surveys & Research — Airtribe",
+          "description": "Ran surveys and conversations to uncover real learner friction."
+        },
+        {
+          "title": "Creative Problem-Solving at Speed",
+          "description": "Explore options fast → test → converge on what works."
+        },
+        {
+          "title": "Strong, Direct Communication",
+          "description": "Share context and decisions clearly so teams stay aligned."
+        },
+        {
+          "title": "Ownership & Action Bias",
+          "description": "Pick problems end-to-end and push them forward."
+        }
+      ]
+    }
+  ]
+}
