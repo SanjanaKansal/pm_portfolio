@@ -22,27 +22,19 @@ export interface Education {
 export interface ExperienceItem {
   company: string
   role: string
+  years: string
   description: string
 }
 
 export interface Experience {
   title: string
   items: ExperienceItem[]
-  summary: string
-}
-
-export interface CurrentRole {
-  title: string
-  company: string
-  role: string
-  points: string[]
 }
 
 export interface WhoAmIData {
   background: Background
   education: Education
   experience: Experience
-  currentRole: CurrentRole
 }
 
 // =============================================================================
@@ -56,6 +48,4 @@ export interface WhoAmIProps {
   education: Education
   /** Experience section data */
   experience: Experience
-  /** Current role section data */
-  currentRole: CurrentRole
 }

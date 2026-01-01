@@ -7,7 +7,6 @@ export default function WhoAmIPreview() {
       background={data.background}
       education={data.education}
       experience={data.experience}
-      currentRole={data.currentRole}
     />
   )
 }
