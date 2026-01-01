@@ -255,14 +255,18 @@ export function ScreenDesignFullscreen() {
 
           // Parse navigation items from spec (format: "**Label** → Description")
           const navigationItems = specNavItems.length > 0
-            ? specNavItems.map((item, index) => {
+            ? specNavItems.map((item) => {
                 // Extract label from **Label** format
                 const labelMatch = item.match(/\*\*([^*]+)\*\*/)
-                const label = labelMatch ? labelMatch[1] : item.split('→')[0]?.trim() || `Item ${index + 1}`
+                const label = labelMatch ? labelMatch[1] : item.split('→')[0]?.trim() || 'Item'
+                const href = `/${label.toLowerCase().replace(/[?!]/g, '').replace(/\s+/g, '-')}`
+                // Match against current sectionId to determine active state
+                const sectionSlug = sectionId?.toLowerCase().replace(/-/g, '-') || ''
+                const isActive = href.includes(sectionSlug) || label.toLowerCase().replace(/[?!]/g, '').replace(/\s+/g, '-') === sectionSlug
                 return {
                   label,
-                  href: `/${label.toLowerCase().replace(/\s+/g, '-')}`,
-                  isActive: index === 0,
+                  href,
+                  isActive,
                 }
               })
             : [
