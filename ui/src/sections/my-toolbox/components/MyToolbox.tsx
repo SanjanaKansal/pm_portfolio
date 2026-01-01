@@ -9,7 +9,7 @@ const colorMap = {
 
 export function MyToolbox({ categories }: MyToolboxProps) {
   return (
-    <div className="flex min-h-[calc(100vh-8rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-8rem)]">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-4rem)]">
       {/* 4 rows - one per category */}
       {categories.map((category) => (
         <div

@@ -49,13 +49,13 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
           <MobileMenu
             items={navigationItems}
             onNavigate={handleNavigate}
-            className="md:hidden"
+            className="relative z-50 md:hidden"
           />
         </div>
       </header>
 
-      {/* Main Content - full width, no padding */}
-      <main>{children}</main>
+      {/* Main Content - full width on mobile, 80% on desktop */}
+      <main className="mx-auto w-full md:w-[80%]">{children}</main>
     </div>
   )
 }

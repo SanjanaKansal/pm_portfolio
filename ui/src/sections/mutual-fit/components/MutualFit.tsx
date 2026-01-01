@@ -7,7 +7,7 @@ const colorMap = {
 
 export function MutualFit({ rows }: MutualFitProps) {
   return (
-    <div className="flex min-h-[calc(100vh-8rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-8rem)]">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-4rem)]">
       {/* 2 rows */}
       {rows.map((row) => (
         <div
