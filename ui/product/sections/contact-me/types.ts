@@ -12,9 +12,11 @@ export interface Social {
 export interface ContactMeData {
   identity: Identity
   socials: Social[]
+  tagline: string
 }
 
 export interface ContactMeProps {
   identity: Identity
   socials: Social[]
+  tagline: string
 }

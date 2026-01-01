@@ -1,8 +1,8 @@
 import type { ContactMeProps } from '@/../product/sections/contact-me/types'
 
-export function ContactMe({ identity, socials }: ContactMeProps) {
+export function ContactMe({ identity, socials, tagline }: ContactMeProps) {
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-4rem)]">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800">
       {/* Row 1: Identity */}
       <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr]">
         <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
@@ -52,6 +52,18 @@ export function ContactMe({ identity, socials }: ContactMeProps) {
             </p>
           </a>
         ))}
+      </div>
+
+      {/* Row 3: Tagline */}
+      <div className="grid grid-cols-1 gap-px md:grid-cols-[8rem_1fr]">
+        <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
+          <h2 className="text-xs font-medium uppercase tracking-widest text-amber-600 dark:text-amber-400">
+            Tagline
+          </h2>
+        </div>
+        <div className="flex flex-col justify-center bg-stone-50 p-6 dark:bg-stone-950">
+          <p className="text-lg text-stone-700 dark:text-stone-300">{tagline}</p>
+        </div>
       </div>
     </div>
   )
