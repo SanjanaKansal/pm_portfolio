@@ -1,4 +1,4 @@
-import type { WhoAmIProps } from '@/../product/sections/who-am-i/types'
+import type { WhoAmIProps } from '../types'
 
 export function WhoAmI({
   background,
@@ -18,7 +18,7 @@ export function WhoAmI({
   }))
 
   return (
-    <div className="flex min-h-[calc(100vh-8rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-8rem)]">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 md:h-[calc(100vh-4rem)] dark:bg-stone-800">
       {/* Row 1: Journey - 3 cards */}
       <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr_1fr_1fr]">
         <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">

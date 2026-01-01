@@ -1,8 +1,8 @@
-import type { ContactMeProps } from '@/../product/sections/contact-me/types'
+import type { ContactMeProps } from '../types'
 
 export function ContactMe({ identity, socials }: ContactMeProps) {
   return (
-    <div className="flex min-h-[calc(100vh-8rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-8rem)] md:flex-row">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 md:h-[calc(100vh-4rem)] md:flex-row dark:bg-stone-800">
       {/* Left - Identity & Email */}
       <div className="flex flex-1 flex-col gap-px">
         {/* Row label */}

@@ -1,4 +1,4 @@
-import type { MyToolboxProps } from '@/../product/sections/my-toolbox/types'
+import type { MyToolboxProps } from '../types'
 
 const colorMap = {
   stone: 'text-stone-600 dark:text-stone-400',
@@ -9,7 +9,7 @@ const colorMap = {
 
 export function MyToolbox({ categories }: MyToolboxProps) {
   return (
-    <div className="flex min-h-[calc(100vh-8rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-8rem)]">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 md:h-[calc(100vh-4rem)] dark:bg-stone-800">
       {/* 4 rows - one per category */}
       {categories.map((category) => (
         <div
