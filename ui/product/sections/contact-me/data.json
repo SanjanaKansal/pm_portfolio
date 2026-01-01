@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "models": {
+      "identity": "Personal identity and direct contact information.",
+      "socials": "Social media profiles and links."
+    }
+  },
+  "identity": {
+    "name": "Sanjana Kansal",
+    "email": "sanjana.kansal13@gmail.com",
+    "phone": "+91-7889829087"
+  },
+  "socials": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/sanjanakansal/"
+    },
+    {
+      "platform": "X (Twitter)",
+      "url": "https://x.com/sanjana_kansal"
+    },
+    {
+      "platform": "Medium",
+      "url": "https://medium.com/@sanjana.kansal13"
+    }
+  ]
+}
