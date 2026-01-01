@@ -1,29 +1,10 @@
-import { useState } from 'react'
 import type { WhoAmIProps } from '@/../product/sections/who-am-i/types'
-
-interface RowState {
-  [key: string]: number
-}
 
 export function WhoAmI({
   background,
   education,
   experience,
 }: WhoAmIProps) {
-  const [revealed, setRevealed] = useState<RowState>({
-    journey: 0,
-    education: 0,
-    experience: 0,
-  })
-
-  const handleCardClick = (row: string, maxCols: number) => {
-    setRevealed((prev) => ({
-      ...prev,
-      [row]: Math.min(prev[row] + 1, maxCols - 1),
-    }))
-  }
-
-  // Prepare data
   const journeyCards = background.points.slice(0, 3)
   const educationCards = education.items.slice(0, 2).map((item) => ({
     title: item.institution,
@@ -46,13 +27,7 @@ export function WhoAmI({
           </h2>
         </div>
         {[0, 1, 2].map((index) => (
-          <GridCard
-            key={`journey-${index}`}
-            content={journeyCards[index]}
-            isRevealed={revealed.journey >= index}
-            onClick={() => handleCardClick('journey', journeyCards.filter(Boolean).length)}
-            hasMore={revealed.journey === index && index < journeyCards.filter(Boolean).length - 1}
-          />
+          <GridCard key={`journey-${index}`} content={journeyCards[index]} />
         ))}
       </div>
 
@@ -71,9 +46,6 @@ export function WhoAmI({
               title={card?.title}
               subtitle={card?.subtitle}
               content={card?.content}
-              isRevealed={revealed.education >= index}
-              onClick={() => handleCardClick('education', educationCards.length)}
-              hasMore={revealed.education === index && index < educationCards.length - 1}
             />
           )
         })}
@@ -94,9 +66,6 @@ export function WhoAmI({
               title={card?.title}
               subtitle={card?.subtitle}
               content={card?.content}
-              isRevealed={revealed.experience >= index}
-              onClick={() => handleCardClick('experience', experienceCards.length)}
-              hasMore={revealed.experience === index && index < experienceCards.length - 1}
             />
           )
         })}
@@ -109,26 +78,11 @@ interface GridCardProps {
   title?: string
   subtitle?: string
   content?: string
-  isRevealed: boolean
-  onClick: () => void
-  hasMore: boolean
 }
 
-function GridCard({ title, subtitle, content, isRevealed, onClick, hasMore }: GridCardProps) {
-  const isEmpty = !title && !subtitle && !content
-
+function GridCard({ title, subtitle, content }: GridCardProps) {
   return (
-    <button
-      onClick={onClick}
-      disabled={!hasMore}
-      className={`flex flex-col justify-center bg-stone-50 p-6 text-left transition-all duration-300 dark:bg-stone-950 ${
-        isEmpty
-          ? 'cursor-default'
-          : isRevealed
-          ? 'opacity-100'
-          : 'pointer-events-none opacity-0'
-      } ${hasMore && isRevealed ? 'cursor-pointer hover:bg-stone-100 dark:hover:bg-stone-900' : ''}`}
-    >
+    <div className="flex flex-col justify-center bg-stone-50 p-6 dark:bg-stone-950">
       {title && (
         <h3 className="text-sm font-medium text-stone-900 dark:text-stone-100">
           {title}
@@ -144,11 +98,6 @@ function GridCard({ title, subtitle, content, isRevealed, onClick, hasMore }: Gr
           {content}
         </p>
       )}
-      {hasMore && isRevealed && (
-        <p className="mt-3 text-xs text-amber-600 dark:text-amber-400">
-          Click to continue →
-        </p>
-      )}
-    </button>
+    </div>
   )
 }
