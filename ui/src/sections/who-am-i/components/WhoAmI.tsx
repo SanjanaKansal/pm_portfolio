@@ -1,123 +1,170 @@
-import type { WhoAmIProps } from '@/../product/sections/who-am-i/types'
+import { useState } from 'react'
+import { ChevronRight, Lightbulb, Brain, Zap, Target } from 'lucide-react'
+import type { WhoAmIProps, StoryItem } from '@/../product/sections/who-am-i/types'
 
-export function WhoAmI({
-  background,
-  education,
-  experience,
-}: WhoAmIProps) {
-  const journeyCards = background.points.slice(0, 3)
-  const educationCards = education.items.slice(0, 2).map((item) => ({
-    title: item.institution,
-    subtitle: `${item.degree}${item.years ? ` · ${item.years}` : ''}`,
-    content: item.description,
-  }))
-  const experienceCards = experience.items.slice(0, 3).map((item) => ({
-    title: item.company,
-    subtitle: `${item.role}${item.years ? ` · ${item.years}` : ''}`,
-    content: item.description,
-  }))
+const storyIcons = {
+  context: ChevronRight,
+  insight: Lightbulb,
+  reasoning: Brain,
+  action: Zap,
+  impact: Target,
+}
+
+export function WhoAmI({ experience }: WhoAmIProps) {
+  const [selectedExp, setSelectedExp] = useState(0)
+  const [selectedStory, setSelectedStory] = useState(0)
+
+  const currentExp = experience.items[selectedExp]
+  const stories = (currentExp as any)?.stories as StoryItem[] | undefined
+  const currentStory = stories?.[selectedStory]
 
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] flex-col gap-px bg-stone-200 dark:bg-stone-800 md:h-[calc(100vh-4rem)]">
-      {/* Row 1: Journey - 3 cards */}
-      <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr_1fr_1fr]">
-        <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
-          <h2 className="text-xs font-medium uppercase tracking-widest text-amber-600 dark:text-amber-400">
-            Journey
-          </h2>
-        </div>
-        {[0, 1, 2].map((index) => (
-          <GridCard key={`journey-${index}`} content={journeyCards[index]} />
-        ))}
-      </div>
-
-      {/* Row 2: Education - 1 card */}
-      <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr]">
-        <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
-          <h2 className="text-xs font-medium uppercase tracking-widest text-amber-600 dark:text-amber-400">
-            Education
-          </h2>
-        </div>
-        {educationCards[0] && (
-          <GridCard
-            title={educationCards[0].title}
-            subtitle={educationCards[0].subtitle}
-            content={educationCards[0].content}
-          />
-        )}
-      </div>
-
-      {/* Row 3: Experience - 3 cards */}
-      <div className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr_1fr_1fr]">
-        <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
-          <h2 className="text-xs font-medium uppercase tracking-widest text-amber-600 dark:text-amber-400">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col bg-[var(--background)] lg:flex-row">
+      {/* Left Panel - Company Timeline */}
+      <aside className="shrink-0 border-b border-[var(--border)] bg-[var(--card)] lg:w-72 lg:border-b-0 lg:border-r">
+        <div className="p-4 lg:p-6">
+          <h2 className="text-xs font-medium uppercase tracking-widest text-[var(--muted-foreground)]">
             Experience
           </h2>
         </div>
-        {[0, 1, 2].map((index) => {
-          const card = experienceCards[index]
-          return (
-            <GridCard
-              key={`experience-${index}`}
-              title={card?.title}
-              subtitle={card?.subtitle}
-              content={card?.content}
-            />
-          )
-        })}
+
+        <nav className="flex gap-2 overflow-x-auto px-4 pb-4 lg:flex-col lg:gap-1 lg:px-3 lg:pb-6">
+          {experience.items.map((item, index) => {
+            const isActive = selectedExp === index
+            return (
+              <button
+                key={index}
+                onClick={() => {
+                  setSelectedExp(index)
+                  setSelectedStory(0)
+                }}
+                className={`group relative shrink-0 rounded-lg px-4 py-3 text-left transition-all duration-300 lg:w-full ${
+                  isActive
+                    ? 'bg-[var(--foreground)] text-[var(--background)]'
+                    : 'hover:bg-[var(--secondary)]'
+                }`}
+              >
+                {/* Active indicator */}
+                {isActive && (
+                  <div className="absolute left-0 top-1/2 hidden h-8 w-1 -translate-y-1/2 rounded-r-full bg-[var(--accent)] lg:block" />
+                )}
+
+                <div className={`text-sm font-medium ${isActive ? '' : 'text-[var(--foreground)]'}`}>
+                  {item.company}
+                </div>
+                <div className={`mt-0.5 hidden text-xs lg:block ${isActive ? 'opacity-70' : 'text-[var(--muted-foreground)]'}`}>
+                  {item.role}
+                </div>
+                <div className={`mt-1 hidden text-xs lg:block ${isActive ? 'opacity-50' : 'text-[var(--muted-foreground)] opacity-60'}`}>
+                  {item.years}
+                </div>
+              </button>
+            )
+          })}
+        </nav>
+      </aside>
+
+      {/* Right Panel - Story Content */}
+      <div className="flex flex-1 flex-col overflow-hidden">
+        {/* Company Header */}
+        <header className="shrink-0 border-b border-[var(--border)] bg-[var(--card)] px-6 py-6 lg:px-8">
+          <div className="max-w-4xl">
+            <div className="flex items-start justify-between">
+              <div>
+                <h1 className="text-xl font-semibold text-[var(--foreground)] lg:text-2xl">
+                  {currentExp?.company}
+                </h1>
+                <p className="mt-1 text-[var(--accent)]">
+                  {currentExp?.role}
+                </p>
+                {(currentExp as any)?.tagline && (
+                  <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+                    {(currentExp as any).tagline}
+                  </p>
+                )}
+              </div>
+              <span className="hidden rounded-full bg-[var(--secondary)] px-3 py-1 text-xs text-[var(--muted-foreground)] sm:inline-block">
+                {currentExp?.years}
+              </span>
+            </div>
+
+            {/* Story Selector */}
+            {stories && stories.length > 1 && (
+              <div className="mt-6 flex gap-2">
+                {stories.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedStory(index)}
+                    className={`relative rounded-full px-4 py-1.5 text-xs font-medium transition-all duration-300 ${
+                      selectedStory === index
+                        ? 'bg-[var(--foreground)] text-[var(--background)]'
+                        : 'bg-[var(--secondary)] text-[var(--muted-foreground)] hover:bg-[var(--border)] hover:text-[var(--foreground)]'
+                    }`}
+                  >
+                    Story {index + 1}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </header>
+
+        {/* Story Grid */}
+        {currentStory && (
+          <div className="flex-1 overflow-y-auto px-6 py-8 lg:px-8">
+            <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-5">
+              {(['context', 'insight', 'reasoning', 'action', 'impact'] as const).map((key, index) => (
+                <StoryCard
+                  key={key}
+                  type={key}
+                  content={currentStory[key]}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
 }
 
-interface GridCardProps {
-  title?: string
-  subtitle?: string
-  content?: string
+interface StoryCardProps {
+  type: 'context' | 'insight' | 'reasoning' | 'action' | 'impact'
+  content: string
+  index: number
 }
 
-function renderContent(text: string) {
-  // Split by newlines first, then handle bold within each line
-  const lines = text.split('\n')
-  return lines.map((line, lineIndex) => {
-    const parts = line.split(/(\*\*[^*]+\*\*)/g)
-    const renderedParts = parts.map((part, partIndex) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return (
-          <strong key={partIndex} className="font-semibold text-stone-900 dark:text-stone-100">
-            {part.slice(2, -2)}
-          </strong>
-        )
-      }
-      return <span key={partIndex}>{part}</span>
-    })
-    return (
-      <span key={lineIndex}>
-        {renderedParts}
-        {lineIndex < lines.length - 1 && <br />}
-      </span>
-    )
-  })
-}
+function StoryCard({ type, content, index }: StoryCardProps) {
+  const Icon = storyIcons[type]
+  const labels = {
+    context: 'Context',
+    insight: 'Insight',
+    reasoning: 'Reasoning',
+    action: 'Action',
+    impact: 'Impact',
+  }
 
-function GridCard({ title, subtitle, content }: GridCardProps) {
   return (
-    <div className="flex flex-col justify-center bg-stone-50 p-6 dark:bg-stone-950">
-      {title && (
-        <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">
-          {title}
-        </h3>
-      )}
-      {subtitle && (
-        <p className="mt-0.5 text-xs text-stone-400 dark:text-stone-500">
-          {subtitle}
-        </p>
-      )}
-      {content && (
-        <p className={`text-sm leading-relaxed text-stone-600 dark:text-stone-400 ${title ? 'mt-2' : ''}`}>
-          {renderContent(content)}
-        </p>
-      )}
+    <div
+      className="animate-fade-in-up fill-both group relative overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition-all duration-300 hover:shadow-md"
+      style={{ animationDelay: `${index * 75}ms` }}
+    >
+      {/* Left accent bar */}
+      <div className="absolute left-0 top-0 h-full w-1 bg-[var(--foreground)] opacity-20 group-hover:opacity-40 transition-opacity" />
+
+      {/* Icon Badge */}
+      <div className="mb-3 inline-flex items-center gap-2 text-[var(--muted-foreground)]">
+        <Icon size={14} strokeWidth={2.5} />
+        <span className="text-xs font-semibold uppercase tracking-wider">
+          {labels[type]}
+        </span>
+      </div>
+
+      {/* Content */}
+      <p className="text-sm leading-relaxed text-[var(--foreground)]/80">
+        {content}
+      </p>
     </div>
   )
 }

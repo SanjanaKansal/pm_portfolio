@@ -11,13 +11,15 @@ export interface AppShellProps {
   children: React.ReactNode
   navigationItems: NavigationItem[]
   brandName?: string
+  brandTitle?: string
   onNavigate?: (href: string) => void
 }
 
 export function AppShell({
   children,
   navigationItems,
-  brandName = 'Sanjana',
+  brandName = 'Sanjana Kansal',
+  brandTitle = 'AI Product Manager · IIT Jammu CS · Builder',
   onNavigate,
 }: AppShellProps) {
   return (
@@ -34,9 +36,12 @@ export function AppShell({
                 onNavigate('/')
               }
             }}
-            className="font-medium text-stone-900 transition-colors hover:text-amber-600 dark:text-stone-100 dark:hover:text-amber-400"
+            className="transition-colors hover:text-amber-600 dark:hover:text-amber-400"
           >
-            {brandName}
+            <span className="font-medium text-stone-900 dark:text-stone-100">{brandName}</span>
+            {brandTitle && (
+              <span className="ml-2 text-sm text-stone-500 dark:text-stone-400">{brandTitle}</span>
+            )}
           </a>
 
           {/* Desktop Navigation */}

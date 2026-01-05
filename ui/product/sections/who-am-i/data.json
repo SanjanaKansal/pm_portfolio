@@ -1,22 +1,17 @@
 {
   "_meta": {
     "models": {
-      "background": "Your origin story — what sparked your curiosity and shaped your path from human psychology to systems thinking.",
-      "education": "Your academic journey and formal learning experiences that built your foundation.",
-      "experience": "Places you've worked and the impact you've made — engineering with business context."
-    },
-    "relationships": [
-      "Background sets the context for why you chose your education path",
-      "Education provides the foundation that enabled your experience",
-      "Experience builds toward your current role and future direction"
-    ]
+      "background": "Your origin story — the path from engineering to product.",
+      "education": "Your academic foundation.",
+      "experience": "Places you've worked with stories structured as Context → Insight → Reasoning → Action → Impact."
+    }
   },
   "background": {
     "title": "Journey",
     "points": [
-      "I've always been curious about how people think, decide, and behave.\nThat curiosity pulled me toward problem-solving, systems, and decision-loops — not just code.",
-      "At IIT, I started seeing patterns in behaviour, systems, and technology.\nTech became less about features, and more about how decisions are made, repeated, and improved.",
-      "Over time, I realised my work sits at the intersection of\npeople · product · engineering —\nand I enjoy building where technology reduces friction and improves real-world outcomes."
+      "AI Product Manager with a CS background from IIT Jammu.\nBuilt products 0 to 1, ran discovery, wrote PRDs, shipped.",
+      "15% engagement lift. 30% productivity gain. 25% less manual work. 4x faster response times.\nThese aren't just metrics — they're problems I found and solved.",
+      "Hands-on with RAG, LLMs, and workflow systems.\nI sit at the intersection of product thinking and technical depth."
     ]
   },
   "education": {
@@ -25,8 +20,8 @@
       {
         "institution": "IIT Jammu",
         "degree": "B.Tech, Computer Science",
-        "years": "Aug 2016 – May 2020",
-        "description": "Built foundations in systems, scalability, and first-principles problem-solving.\nLearned to break complexity into clear, actionable product and technical decisions."
+        "years": "Aug 2016 – July 2020",
+        "description": "Built foundations in systems thinking, algorithms, and first-principles problem-solving."
       }
     ]
   },
@@ -34,22 +29,126 @@
     "title": "Experience",
     "items": [
       {
-        "company": "HealthifyMe",
-        "role": "Software Engineer",
-        "years": "Mar 2021 – Dec 2023",
-        "description": "Built reliable, cost-optimised backend systems — caching, Redis pipelines, infra optimisation.\n**4× faster** response times and **~10% lower cloud costs**, while keeping systems stable and compliant."
+        "company": "CoinedOne",
+        "role": "Product Manager (Intern)",
+        "years": "Nov 2025 – Present",
+        "tagline": "Rivo, UAE mortgage management platform",
+        "description": "First formal PM role. Designed AI chatbot, ran discovery, wrote PRDs, managed stakeholders.",
+        "stories": [
+          {
+            "context": "First-time buyers in UAE were abandoning the mortgage journey early.",
+            "insight": "They weren't confused about mortgages — they hadn't decided whether to buy at all.",
+            "reasoning": "The product was solving the wrong problem. We needed to address the upstream decision blocker.",
+            "action": "Designed AskRivo, an AI chatbot that walks users through the rent vs buy tradeoff before pushing products.",
+            "impact": "Addressed the real decision blocker upstream, improving early-stage engagement."
+          },
+          {
+            "context": "Mortgage specialists were managing leads through WhatsApp and Excel with zero visibility.",
+            "insight": "Nobody knew where deals were stalling. Four critical handoff gaps existed in the workflow.",
+            "reasoning": "PRDs should target the gaps first, then sequence releases to avoid overloading the team.",
+            "action": "Ran discovery sessions, mapped end-to-end workflows. Wrote PRDs for gaps. Set phased roadmap: visibility → reliability → productivity → AI.",
+            "impact": "Created structured pipeline visibility for the first time."
+          },
+          {
+            "context": "Faced timeline pressure from stakeholders pushing for more features.",
+            "insight": "Only core flow items would directly impact lead conversion.",
+            "reasoning": "More features ≠ more value. Shipping essentials on time beats shipping everything late.",
+            "action": "Cut scope to essentials. Pushed back on non-critical requests.",
+            "impact": "Shipped on time without compromising functionality specialists actually needed."
+          }
+        ]
+      },
+      {
+        "company": "PrepGPT",
+        "role": "Co-founder & Product Owner",
+        "years": "May 2025 – Oct 2025",
+        "tagline": "AI System Design Practice Assistant",
+        "description": "Entrepreneurial pivot from engineering to product. Built with RAG, agents, and eval loops.",
+        "stories": [
+          {
+            "context": "Started building another system design content library.",
+            "insight": "Talked to 20+ engineers. The problem wasn't content access — nobody was giving them feedback on their answers.",
+            "reasoning": "Feedback loops would be the moat content could never replicate.",
+            "action": "Pivoted the entire product around evaluation instead of information.",
+            "impact": "Session recordings confirmed users were returning for feedback, not content."
+          },
+          {
+            "context": "Needed to ship fast with limited resources.",
+            "insight": "Every component had a build vs buy decision that would affect velocity.",
+            "reasoning": "Made explicit tradeoffs: RAG for retrieval (build), agents for practice (build), eval loops for feedback (build).",
+            "action": "Built the core system. Acquired 50+ users through direct outreach.",
+            "impact": "Validated product-market fit with real usage data."
+          }
+        ]
+      },
+      {
+        "company": "Tote Technologies",
+        "role": "Software Engineer II",
+        "years": "Dec 2024 – Mar 2025",
+        "tagline": "B2B SaaS point of sale platform",
+        "description": "Built features that directly impacted merchant productivity and retention.",
+        "stories": [
+          {
+            "context": "Retail clients were juggling employee schedules in spreadsheets alongside the POS.",
+            "insight": "Scheduling wasn't a separate problem — it was directly tied to register staffing and sales coverage.",
+            "reasoning": "Integrating scheduling into POS would give managers one source of truth.",
+            "action": "Proposed and built a Shift Management module that integrated scheduling into the POS.",
+            "impact": "30% productivity improvement for managers."
+          },
+          {
+            "context": "Clients wanted differentiation but had limited dev resources for custom features.",
+            "insight": "Round-up charity donations at checkout are low-lift but create real emotional impact.",
+            "reasoning": "No complex loyalty programs needed. Simple feature, outsized emotional return.",
+            "action": "Pitched Charity Checkout to leadership, owned the UX, shipped it.",
+            "impact": "Merchants who enabled it saw 25% more repeat purchases."
+          }
+        ]
       },
       {
         "company": "Attentive OS",
         "role": "Software Engineer II",
         "years": "Mar 2023 – Oct 2024",
-        "description": "Co-led platform architecture and built a dynamic proposal engine.\nReduced manual effort by **~25%** and aligned engineering + product around roadmap outcomes.\nConnected **technical execution → measurable business value** across teams."
+        "tagline": "B2B SaaS for AI-powered landscaping takeoffs",
+        "description": "Shipped proposal engine, aligned cross-functional teams, mentored engineers.",
+        "stories": [
+          {
+            "context": "Contractors were spending hours manually assembling proposals after AI-generated takeoffs.",
+            "insight": "We were stopping at takeoff data when the real value was packaging output for their clients.",
+            "reasoning": "API integrations would let us ship the full workflow, not just the data.",
+            "action": "Worked with PM to prioritize integrations. Drove technical decisions. Shipped proposal engine.",
+            "impact": "25% reduction in contractor manual work. Became a key selling point."
+          },
+          {
+            "context": "Engineering, design, and sales were building independent mental models of the product.",
+            "insight": "Misalignment wasn't malicious — nobody was explicitly syncing assumptions.",
+            "reasoning": "Lightweight weekly syncs would surface gaps before they caused rework.",
+            "action": "Mentored 4 engineers. Instituted weekly cross-functional syncs.",
+            "impact": "Sales started selling what we were actually building."
+          }
+        ]
       },
       {
-        "company": "CoinedOne",
-        "role": "PM Intern (AI-First, Mortgage Ops · Rivo)",
-        "years": "Oct 2025 – Present",
-        "description": "Designed the Rivo OS workflow for mortgage specialists, focusing on review, triage, and decision checkpoints.\nRemoved duplicate inputs and unnecessary handoffs — **~30% reduction** in effort per case.\n**Fewer steps. Faster decisions. Higher case-throughput** across the team."
+        "company": "HealthifyMe",
+        "role": "Software Engineer",
+        "years": "Mar 2021 – Dec 2022",
+        "tagline": "Wellness platform for personalized fitness and nutrition",
+        "description": "Improved retention and performance through data-driven problem solving.",
+        "stories": [
+          {
+            "context": "Retention was dropping but nobody had pinpointed where.",
+            "insight": "The drop-off was concentrated in onboarding. Users were bouncing before experiencing the core value prop.",
+            "reasoning": "Getting users to first coach interaction faster would prove value before churn.",
+            "action": "Redesigned the onboarding flow to accelerate time-to-first-value.",
+            "impact": "15% retention improvement."
+          },
+          {
+            "context": "Response times were slow, users complained, cloud costs climbed.",
+            "insight": "The bottleneck wasn't code quality — it was database queries and caching misses.",
+            "reasoning": "Redis caching and MySQL partitioning would give 80% of gains with 20% of effort.",
+            "action": "Led optimization initiative with PM and infra team.",
+            "impact": "4x faster response times. 10% cloud cost reduction."
+          }
+        ]
       }
     ]
   }

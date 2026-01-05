@@ -11,35 +11,43 @@
       "color": "amber",
       "skills": [
         {
-          "title": "Problem Framing & Decision Loops",
-          "description": "I begin with behaviour, constraints, and outcomes — not features.\nMap the decision path → remove friction → ship in tight learning cycles.\n**Rivo** (Mortgage Ops): review + triage workflow redesign → **~30% lower effort** per case and higher case-throughput per specialist."
+          "title": "Discovery & User Research",
+          "description": "Talked to 20+ engineers before building PrepGPT. Ran discovery sessions at Rivo, mapped end-to-end workflows, found 4 critical handoff gaps. PRDs came after understanding real friction."
         },
         {
-          "title": "Roadmapping & Prioritisation",
-          "description": "Decisions are guided by activation, retention, and time-to-decision, not feature volume.\n**Attentive OS**: proposal-engine iterations focused on workflow gains → **~25% reduction** in manual effort across operations."
+          "title": "PRDs & Roadmapping",
+          "description": "Wrote PRDs targeting gaps first. Set phased roadmaps (visibility → reliability → productivity → AI) to sequence releases without overloading teams."
         },
         {
-          "title": "0→1 & Continuous Improvement",
-          "description": "Move ideas from insight → first usable version → measured adoption, without over-engineering.\nLightweight V1s shipped early; strengthened through usage-driven learning.\n**Principles**: clarity in thinking • speed in execution • discipline in measurement."
+          "title": "Prioritization & Scoping",
+          "description": "Faced timeline pressure for more features. Recognized only core flow would move conversion. Cut scope to essentials, shipped on time."
+        },
+        {
+          "title": "A/B Testing & Journey Mapping",
+          "description": "Found retention drop-off was concentrated in onboarding at HealthifyMe. Redesigned flow to get users to first value faster. 15% retention lift."
         }
       ]
     },
     {
       "id": "ai",
-      "title": "AI",
+      "title": "AI & LLMs",
       "color": "amber",
       "skills": [
         {
-          "title": "Workflow-First AI Integration",
-          "description": "AI is used where it reduces cognitive load, removes repetition, or improves decision quality.\n**TalentKnct** (RAG Matching Engine): embeddings + feedback loops → **10+ internship placements**, improvements driven by real-world signals."
+          "title": "RAG Systems",
+          "description": "Built PrepGPT with RAG for retrieval. Made explicit build vs buy decisions on each component to ship faster."
         },
         {
-          "title": "Human-in-the-Loop Decision Systems",
-          "description": "AI accelerates judgment — humans own outcomes.\nDesign centres on trust, interpretability, and correction loops."
+          "title": "LLM Integration",
+          "description": "Designed AskRivo, an AI chatbot that walks users through rent vs buy tradeoff before pushing products — addressing the real decision blocker upstream."
         },
         {
-          "title": "Impact-Driven Evaluation",
-          "description": "Success measured through relevance, engagement, and task-completion lift, not vanity metrics.\nThe goal isn't to \"add AI\" — it's to make workflows lighter, faster, and more accurate."
+          "title": "Agents & Eval Loops",
+          "description": "PrepGPT used agents for conversational practice and eval loops for personalized feedback. Session recordings confirmed users returned for feedback, not content."
+        },
+        {
+          "title": "Embeddings",
+          "description": "Hands-on experience with embeddings for semantic search and matching. Built systems where AI reduces cognitive load and removes repetition."
         }
       ]
     },
@@ -49,35 +57,43 @@
       "color": "amber",
       "skills": [
         {
-          "title": "Backend Foundations — Python · Django · APIs",
-          "description": "Work close to systems and data flows to make grounded product decisions.\n**HealthifyMe** (Core Journeys): caching + query optimisation → **4× faster responses** and **~10% lower cloud costs**, with higher reliability at scale."
+          "title": "Python & Django",
+          "description": "Core backend stack. Built reliable systems at HealthifyMe and Attentive OS. Work close to systems and data flows to make grounded product decisions."
         },
         {
-          "title": "Performance as a Product Lever",
-          "description": "Treat latency, throughput, reliability as experience and business value — not just engineering concerns."
+          "title": "SQL · Redis · MySQL",
+          "description": "Led Redis caching and MySQL partitioning at HealthifyMe. 4x faster response times, 10% cloud cost reduction. 80% of gains with 20% of effort."
         },
         {
-          "title": "System Design Awareness",
-          "description": "Prefer simple, predictable architectures that scale without unnecessary complexity.\nConnect product intent ↔ engineering reality so what we design is buildable, efficient, and durable."
+          "title": "AWS & Microservices",
+          "description": "Production experience with AWS infrastructure. Prefer simple, predictable architectures that scale without unnecessary complexity."
+        },
+        {
+          "title": "APIs & Integrations",
+          "description": "Drove API integration decisions at Attentive OS. Shipped proposal engine that became a key selling point."
         }
       ]
     },
     {
-      "id": "user",
-      "title": "User & Soft",
+      "id": "leadership",
+      "title": "Leadership",
       "color": "amber",
       "skills": [
         {
-          "title": "User Insight & Behaviour Understanding",
-          "description": "Conversations, journey mapping, and workflow observation to surface true friction, not assumptions.\n**Rivo** discovery revealed duplicate-entry + handoff bottlenecks that shaped the workflow redesign."
+          "title": "Cross-Functional Alignment",
+          "description": "Engineering, design, and sales were building independent mental models at Attentive. Instituted weekly syncs. Sales started selling what we were actually building."
         },
         {
-          "title": "Structured Communication & Alignment",
-          "description": "Share reasoning clearly → teams stay aligned → execution moves faster."
+          "title": "Stakeholder Management",
+          "description": "Faced timeline pressure from stakeholders pushing for more features. Recognized what would actually impact conversion. Delivered what specialists needed."
         },
         {
-          "title": "Ownership & Calm Delivery",
-          "description": "Take problems end-to-end; operate with intention; stay outcome-oriented over output-oriented."
+          "title": "Mentorship",
+          "description": "Mentored 4 engineers at Attentive OS. Connected technical execution to measurable business value across teams."
+        },
+        {
+          "title": "0→1 Ownership",
+          "description": "Co-founded PrepGPT. First PM at Rivo. Built Shift Management from pitch to production. I thrive when the playbook doesn't exist yet."
         }
       ]
     }

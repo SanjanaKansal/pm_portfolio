@@ -8,7 +8,8 @@
   "identity": {
     "name": "Sanjana Kansal",
     "email": "sanjana.kansal13@gmail.com",
-    "phone": "+91-7889829087"
+    "phone": "+91-7889829087",
+    "headline": "AI Product Manager · IIT Jammu CS · Builder"
   },
   "socials": [
     {
@@ -24,5 +25,5 @@
       "url": "https://medium.com/@sanjana.kansal13"
     }
   ],
-  "tagline": "If the work is meaningful, outcome-driven, and collaborative — I'd love to connect."
+  "tagline": "I build 0→1 products with RAG, LLMs, and workflow systems. If you're solving real problems — let's talk."
 }

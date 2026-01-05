@@ -1,9 +1,14 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { MainNav } from '@/shell/components/MainNav'
-import { MobileMenu } from '@/shell/components/MobileMenu'
+import { Briefcase, Wrench, User } from 'lucide-react'
 
 interface PortfolioLayoutProps {
   children: React.ReactNode
+}
+
+const navIcons = {
+  '/who-am-i': Briefcase,
+  '/my-toolbox': Wrench,
+  '/contact-me': User,
 }
 
 export function PortfolioLayout({ children }: PortfolioLayoutProps) {
@@ -11,50 +16,105 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
   const navigate = useNavigate()
 
   const navigationItems = [
-    { label: 'Who Am I?', href: '/who-am-i', isActive: location.pathname === '/who-am-i' },
-    { label: 'My Toolbox', href: '/my-toolbox', isActive: location.pathname === '/my-toolbox' },
-    { label: 'Contact Me', href: '/contact-me', isActive: location.pathname === '/contact-me' },
+    { label: 'Journey', href: '/who-am-i' },
+    { label: 'Toolbox', href: '/my-toolbox' },
+    { label: 'About Me', href: '/contact-me' },
   ]
 
-  const handleNavigate = (href: string) => {
-    navigate(href)
-  }
-
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-stone-950">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-stone-200 bg-stone-50/80 backdrop-blur-sm dark:border-stone-800 dark:bg-stone-950/80">
-        <div className="flex h-16 items-center justify-between px-6">
-          {/* Brand */}
+    <div className="min-h-screen bg-[var(--background)]">
+      {/* Elegant Header */}
+      <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
+          {/* Brand - Editorial Style */}
           <a
             href="/"
             onClick={(e) => {
               e.preventDefault()
               navigate('/who-am-i')
             }}
-            className="font-medium text-stone-900 transition-colors hover:text-amber-600 dark:text-stone-100 dark:hover:text-amber-400"
+            className="group flex items-baseline gap-3"
           >
-            Sanjana Kansal
+            <span className="text-xl font-semibold tracking-tight text-[var(--foreground)] transition-colors group-hover:text-[var(--accent)]">
+              Sanjana Kansal
+            </span>
+            <span className="hidden text-sm text-[var(--muted-foreground)] transition-colors group-hover:text-[var(--foreground)] sm:inline">
+              AI Product Manager
+            </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <MainNav
-            items={navigationItems}
-            onNavigate={handleNavigate}
-            className="hidden md:flex"
-          />
+          {/* Desktop Navigation - Elegant Pills */}
+          <nav className="hidden items-center gap-1 md:flex">
+            {navigationItems.map((item) => {
+              const isActive = location.pathname === item.href
+              const Icon = navIcons[item.href as keyof typeof navIcons]
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    navigate(item.href)
+                  }}
+                  className={`group relative flex items-center gap-2 rounded-full px-4 py-2 text-sm transition-all duration-300 ${
+                    isActive
+                      ? 'bg-[var(--foreground)] text-[var(--background)]'
+                      : 'text-[var(--muted-foreground)] hover:bg-[var(--secondary)] hover:text-[var(--foreground)]'
+                  }`}
+                >
+                  <Icon size={16} className={isActive ? '' : 'opacity-60 group-hover:opacity-100'} />
+                  <span className="font-medium">{item.label}</span>
+                </a>
+              )
+            })}
+          </nav>
 
-          {/* Mobile Menu */}
-          <MobileMenu
+          {/* Mobile Navigation */}
+          <MobileNav
             items={navigationItems}
-            onNavigate={handleNavigate}
-            className="relative z-50 md:hidden"
+            currentPath={location.pathname}
+            onNavigate={navigate}
           />
         </div>
       </header>
 
-      {/* Main Content - full width on mobile, 80% on desktop */}
-      <main className="mx-auto w-full md:w-[80%]">{children}</main>
+      {/* Main Content */}
+      <main className="animate-fade-in">{children}</main>
     </div>
+  )
+}
+
+interface MobileNavProps {
+  items: { label: string; href: string }[]
+  currentPath: string
+  onNavigate: (href: string) => void
+}
+
+function MobileNav({ items, currentPath, onNavigate }: MobileNavProps) {
+  return (
+    <nav className="flex items-center gap-1 md:hidden">
+      {items.map((item) => {
+        const isActive = currentPath === item.href
+        const Icon = navIcons[item.href as keyof typeof navIcons]
+        return (
+          <a
+            key={item.href}
+            href={item.href}
+            onClick={(e) => {
+              e.preventDefault()
+              onNavigate(item.href)
+            }}
+            className={`rounded-full p-2.5 transition-all duration-300 ${
+              isActive
+                ? 'bg-[var(--foreground)] text-[var(--background)]'
+                : 'text-[var(--muted-foreground)] hover:bg-[var(--secondary)] hover:text-[var(--foreground)]'
+            }`}
+            aria-label={item.label}
+          >
+            <Icon size={18} />
+          </a>
+        )
+      })}
+    </nav>
   )
 }

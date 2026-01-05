@@ -19,11 +19,21 @@ export interface Education {
   items: EducationItem[]
 }
 
+export interface StoryItem {
+  context: string
+  insight: string
+  reasoning: string
+  action: string
+  impact: string
+}
+
 export interface ExperienceItem {
   company: string
   role: string
   years: string
   description: string
+  tagline?: string
+  stories?: StoryItem[]
 }
 
 export interface Experience {
