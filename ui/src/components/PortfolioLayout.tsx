@@ -13,7 +13,6 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
   const navigationItems = [
     { label: 'Who Am I?', href: '/who-am-i', isActive: location.pathname === '/who-am-i' },
     { label: 'My Toolbox', href: '/my-toolbox', isActive: location.pathname === '/my-toolbox' },
-    { label: 'Mutual Fit', href: '/mutual-fit', isActive: location.pathname === '/mutual-fit' },
     { label: 'Contact Me', href: '/contact-me', isActive: location.pathname === '/contact-me' },
   ]
 

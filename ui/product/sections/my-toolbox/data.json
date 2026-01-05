@@ -8,34 +8,30 @@
     {
       "id": "product",
       "title": "Product",
-      "color": "stone",
+      "color": "amber",
       "skills": [
         {
           "title": "Problem Framing & Decision Loops",
-          "description": "I begin with behaviour, constraints, and outcomes — not features.\nMap the decision path → remove friction → ship in tight learning cycles.\n**Rivo (Mortgage Ops)**: workflow redesign across review and triage led to **~30% lower effort** per case and higher case-throughput per specialist."
+          "description": "I begin with behaviour, constraints, and outcomes — not features.\nMap the decision path → remove friction → ship in tight learning cycles.\n**Rivo** (Mortgage Ops): review + triage workflow redesign → **~30% lower effort** per case and higher case-throughput per specialist."
         },
         {
           "title": "Roadmapping & Prioritisation",
-          "description": "Decisions are guided by impact on activation, retention, and time-to-decision, rather than feature volume.\nAt **Attentive OS**, the proposal-engine iterations were shaped around workflow improvement, contributing to a **~25% reduction** in manual effort across operations."
+          "description": "Decisions are guided by activation, retention, and time-to-decision, not feature volume.\n**Attentive OS**: proposal-engine iterations focused on workflow gains → **~25% reduction** in manual effort across operations."
         },
         {
           "title": "0→1 & Continuous Improvement",
-          "description": "Move ideas from insight → first usable version → measured adoption, without over-engineering.\nLightweight V1s for internal tools were shipped early, then strengthened through usage-driven learning."
-        },
-        {
-          "title": "Clarity in thinking, speed in execution, discipline in measurement.",
-          "description": ""
+          "description": "Move ideas from insight → first usable version → measured adoption, without over-engineering.\nLightweight V1s shipped early; strengthened through usage-driven learning.\n**Principles**: clarity in thinking • speed in execution • discipline in measurement."
         }
       ]
     },
     {
       "id": "ai",
       "title": "AI",
-      "color": "blue",
+      "color": "amber",
       "skills": [
         {
           "title": "Workflow-First AI Integration",
-          "description": "AI is used where it reduces cognitive load, removes repetitive steps, or improves decision quality.\n**TalentKnct (RAG Matching Engine)**: embeddings-based matching with feedback loops supported **10+ internship placements**, with improvements driven by real-world usage signals."
+          "description": "AI is used where it reduces cognitive load, removes repetition, or improves decision quality.\n**TalentKnct** (RAG Matching Engine): embeddings + feedback loops → **10+ internship placements**, improvements driven by real-world signals."
         },
         {
           "title": "Human-in-the-Loop Decision Systems",
@@ -43,45 +39,37 @@
         },
         {
           "title": "Impact-Driven Evaluation",
-          "description": "Success is measured through relevance, engagement, and task-completion lift, not vanity metrics."
-        },
-        {
-          "title": "The goal isn't to \"add AI\" — it's to make workflows lighter, faster, and more accurate.",
-          "description": ""
+          "description": "Success measured through relevance, engagement, and task-completion lift, not vanity metrics.\nThe goal isn't to \"add AI\" — it's to make workflows lighter, faster, and more accurate."
         }
       ]
     },
     {
       "id": "tech",
       "title": "Tech",
-      "color": "green",
+      "color": "amber",
       "skills": [
         {
           "title": "Backend Foundations — Python · Django · APIs",
-          "description": "Comfortable working close to systems and data flows to make practical, grounded product decisions.\n**HealthifyMe Core Journeys**: caching and query optimisation delivered **4× faster responses** and **~10% lower cloud costs**, while improving reliability at scale."
+          "description": "Work close to systems and data flows to make grounded product decisions.\n**HealthifyMe** (Core Journeys): caching + query optimisation → **4× faster responses** and **~10% lower cloud costs**, with higher reliability at scale."
         },
         {
           "title": "Performance as a Product Lever",
-          "description": "Latency, throughput, and reliability treated as experience and business value, not just engineering concerns."
+          "description": "Treat latency, throughput, reliability as experience and business value — not just engineering concerns."
         },
         {
           "title": "System Design Awareness",
-          "description": "Prefer simple, predictable architectures that scale without unnecessary complexity."
-        },
-        {
-          "title": "I connect product intent with engineering reality — so what we design is buildable, efficient, and durable.",
-          "description": ""
+          "description": "Prefer simple, predictable architectures that scale without unnecessary complexity.\nConnect product intent ↔ engineering reality so what we design is buildable, efficient, and durable."
         }
       ]
     },
     {
       "id": "user",
       "title": "User & Soft",
-      "color": "stone",
+      "color": "amber",
       "skills": [
         {
           "title": "User Insight & Behaviour Understanding",
-          "description": "Conversations, journey mapping, and workflow observation to surface true friction, not assumed problems.\n**Rivo discovery work** revealed duplicate-entry and handoff bottlenecks that shaped the workflow redesign."
+          "description": "Conversations, journey mapping, and workflow observation to surface true friction, not assumptions.\n**Rivo** discovery revealed duplicate-entry + handoff bottlenecks that shaped the workflow redesign."
         },
         {
           "title": "Structured Communication & Alignment",
@@ -89,11 +77,7 @@
         },
         {
           "title": "Ownership & Calm Delivery",
-          "description": "Take problems end-to-end, operate with intention, and stay outcome-oriented over output-oriented."
-        },
-        {
-          "title": "My strength: systems thinking + execution speed + measurable outcomes — across product, AI, and engineering.",
-          "description": ""
+          "description": "Take problems end-to-end; operate with intention; stay outcome-oriented over output-oriented."
         }
       ]
     }

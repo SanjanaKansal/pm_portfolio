@@ -1,11 +1,5 @@
 import type { MyToolboxProps } from '@/../product/sections/my-toolbox/types'
 
-const colorMap = {
-  stone: 'text-stone-600 dark:text-stone-400',
-  blue: 'text-blue-600 dark:text-blue-400',
-  amber: 'text-amber-600 dark:text-amber-400',
-  green: 'text-green-600 dark:text-green-400',
-}
 
 function renderContent(text: string) {
   if (!text) return null
@@ -38,11 +32,11 @@ export function MyToolbox({ categories }: MyToolboxProps) {
       {categories.map((category) => (
         <div
           key={category.id}
-          className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr_1fr_1fr_1fr]"
+          className="grid flex-1 grid-cols-1 gap-px md:grid-cols-[8rem_1fr_1fr_1fr]"
         >
           {/* Row label */}
           <div className="flex items-center justify-center bg-stone-50 px-4 py-3 md:py-0 dark:bg-stone-950">
-            <h2 className={`text-xs font-medium uppercase tracking-widest ${colorMap[category.color]}`}>
+            <h2 className="text-xs font-medium uppercase tracking-widest text-amber-600 dark:text-amber-400">
               {category.title}
             </h2>
           </div>
